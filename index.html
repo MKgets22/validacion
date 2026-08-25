@@ -9,18 +9,20 @@
 
 <body>
 
-
     <form id="form">
         <h1 id="form_title">vadilacion</h1>
         <div class="input-div">
             <input type="text" id="username" placeholder="nombre de usuario">
+            <p id="informacion">Debe incuir un 1 Numero y 1 letra. Maximo 16 caracteres
+            </p>
         </div>
         <div class="input-div">
             <input type="email" id="email" placeholder="correo electronico">
+            <p id="informacion">Debe ser del sigiente formato: Ejemplo@Correo.com </p>
         </div>
         <div class="input-div">
             <select id="countries">
-                 <option value="" Selected disabled>selecciona un pais</option>
+                <option value="" Selected disabled>selecciona un pais</option>
                 <option data-countryCode="GB" value="44">UK (+44)</option>
                 <option data-countryCode="US" value="1">USA (+1)</option>
                 <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -238,10 +240,23 @@
                 <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                 <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
             </select>
-
+            <p id="informacion">Debe seleccionar un pais
             <div class="input-div">
-            <input type="tel" id="phone" placeholder="Numero de telefono">
-        </div>
+                <span id="fhone-code>+##</span>
+                <input type=" tel" id="phone" placeholder="Numero de telefono">
+                    <p id="informacion">Solo acepta numeros
+            </div>
+            <div class="input-div">
+                <input type="password" id="password" placeholder="contrasena">
+                <p id="informacion">Debe incuir un 1 Numero y 1 letra. Maximo 24 caracteres
+                </p>
+            </div>
+            <div class="input-div">
+                <input type="password" id="password" placeholder="confirmar contrasena">
+                <p id="informacion">Debe coincidir con la contrasena
+                </p>
+            </div>
+
 
     </form>
     <script src="script.js"></script>
