@@ -8,10 +8,12 @@ const countries = document.querySelector('#countries');
 const usernameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email')
 const phoneCode = document.querySelector('#phone-code')
+const phoneInput = document.querySelector('#phone')
 
 // validations
 let usernameValidation = false;
 let imeilValidation = false;
+let phoneValidation = false;
 
 //funciones
 const validation = (e, validation, element) => {
@@ -55,6 +57,10 @@ countries.addEventListener('input', e => {
     phoneCode.innerHTML = `+${optionSelected.value}`
 });
 
+phoneInput.addEventListener('input', e =>{
+    phoneValidation = number_regex.test(e.target.value);
+    validation(e, phoneValidation, phoneInput)
+});
 
 
 
