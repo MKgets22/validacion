@@ -3,26 +3,29 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>vadilacion</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Validación</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
     <form id="form">
-        <h1 id="form_title">vadilacion</h1>
+        <h1 id="form_title">Validación</h1>
+        
         <div class="input-div">
             <input type="text" id="username" placeholder="nombre de usuario">
-            <p id="informacion">Debe incuir un 1 Numero y 1 letra. Maximo 16 caracteres
-            </p>
+            <p class="information">Debe incluir 1 número y 1 letra. Máximo 16 caracteres.</p>
         </div>
+        
         <div class="input-div">
             <input type="email" id="email" placeholder="correo electronico">
-            <p id="informacion">Debe ser del sigiente formato: Ejemplo@Correo.com </p>
+            <p class="information">Debe ser del siguiente formato: Ejemplo@Correo.com</p>
         </div>
+        
         <div class="input-div">
             <select id="countries">
-                <option value="" Selected disabled>selecciona un pais</option>
+                <option value="" selected disabled>selecciona un pais</option>
                 <option data-countryCode="GB" value="44">UK (+44)</option>
                 <option data-countryCode="US" value="1">USA (+1)</option>
                 <option data-countryCode="DZ" value="213">Algeria (+213)</option>
@@ -240,25 +243,28 @@
                 <option data-countryCode="ZM" value="260">Zambia (+260)</option>
                 <option data-countryCode="ZW" value="263">Zimbabwe (+263)</option>
             </select>
-            <p id="informacion">Debe seleccionar un pais
-            <div class="input-div">
-                <span id="fhone-code>+##</span>
-                <input type=" tel" id="phone" placeholder="Numero de telefono">
-                    <p id="informacion">Solo acepta numeros
-            </div>
-            <div class="input-div">
-                <input type="password" id="password" placeholder="contrasena">
-                <p id="informacion">Debe incuir un 1 Numero y 1 letra. Maximo 24 caracteres
-                </p>
-            </div>
-            <div class="input-div">
-                <input type="password" id="password" placeholder="confirmar contrasena">
-                <p id="informacion">Debe coincidir con la contrasena
-                </p>
-            </div>
+            <p id="informacion" class="information">Debe seleccionar un pais</p>
+        </div>
 
+        <div class="input-div">
+            <span id="phone-code">+##</span>
+            <input type="tel" id="phone" placeholder="Numero de telefono">
+            <p class="information">Solo acepta numeros</p>
+        </div>
+        
+        <div class="input-div">
+            <input type="password" id="password" placeholder="contrasena">
+            <p class="information">Debe incuir un 1 Numero y 1 letra. Maximo 24 caracteres</p>
+        </div>
+        
+        <div class="input-div">
+            <input type="password" id="confirm_password" placeholder="confirmar contrasena">
+            <p class="information">Debe coincidir con la contrasena</p>
+        </div>
 
+        <button disabled id="form-btn">Registrate</button>
     </form>
+    
     <script src="script.js"></script>
 </body>
 

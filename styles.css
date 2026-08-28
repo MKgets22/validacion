@@ -1,0 +1,12 @@
+.correct {
+    outline: 2px solid #22c55e;
+}
+
+.incorrect {
+    outline: 2px solid #ef4444;
+
+}
+
+.show-information {
+    display: block;
+}
