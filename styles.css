@@ -10,3 +10,8 @@
 .show-information {
     display: block;
 }
+
+.information{
+    display: none;
+}
+
