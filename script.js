@@ -7,6 +7,7 @@ const number_regex = /^[0-9]{6,16}$/;
 const countries = document.querySelector('#countries');
 const usernameInput = document.querySelector('#username');
 const emailInput = document.querySelector('#email')
+const phoneCode = document.querySelector('#phone-code')
 
 // validations
 let usernameValidation = false;
@@ -42,15 +43,21 @@ usernameInput.addEventListener('input', e => {
     validation(e, usernameValidation, usernameInput)
 });
 
-emailInput.addEventListener('input', e =>{
+emailInput.addEventListener('input', e => {
 
     imeilValidation = email_regex.test(e.target.value);
     validation(e, imeilValidation, emailInput)
 
 })
 
+countries.addEventListener('input', e => {
+    const optionSelected = [...e.target.children].find(option => option.selected);
+    phoneCode.innerHTML = `+${optionSelected.value}`
+});
 
 
 
 
- 
+
+
+
